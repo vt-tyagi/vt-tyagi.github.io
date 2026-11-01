@@ -78,10 +78,11 @@
     </div>`;
   $("#toTop").addEventListener("click", e => { e.preventDefault(); scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); });
 
-  /* ---------- Theme (dark by default) ---------- */
-  // Dark unless the visitor picks light with the toggle; re-apply if anything else (e.g. an embedding host) changes it
-  const THEME_KEY = "vt-theme";
-  const wantedTheme = () => { try { return localStorage.getItem(THEME_KEY) || "dark"; } catch (e) { return "dark"; } };
+  /* ---------- Theme (light by default) ---------- */
+  // Light unless the visitor picks dark with the toggle; re-apply if anything else (e.g. an embedding host) changes it.
+  // New storage key so earlier saved "dark" choices don't override the new default.
+  const THEME_KEY = "vt-theme-v2";
+  const wantedTheme = () => { try { return localStorage.getItem(THEME_KEY) || "light"; } catch (e) { return "light"; } };
   root.dataset.theme = wantedTheme();
   new MutationObserver(() => { const w = wantedTheme(); if (root.dataset.theme !== w) root.dataset.theme = w; })
     .observe(root, { attributes: true, attributeFilter: ["data-theme"] });
