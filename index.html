@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Vaibhav Tyagi — Atmospheric Remote Sensing &amp; Radar Meteorology</title>
+  <meta name="description" content="Dr. Vaibhav Tyagi, radar meteorologist. Research in atmospheric remote sensing: weather radar, satellite observations, numerical weather prediction and AI for high-impact weather.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><rect width='34' height='34' rx='9' fill='%23071520'/><circle cx='17' cy='17' r='11' fill='none' stroke='%232ee6d6' stroke-opacity='.5'/><path d='M17 17 L17 6 A11 11 0 0 1 26.5 11.5 Z' fill='%232ee6d6' fill-opacity='.6'/><circle cx='22.5' cy='12' r='2' fill='%23fdf802'/><circle cx='11.5' cy='21.5' r='1.7' fill='%23fd0000'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('vt-theme') || 'dark'; } catch (e) {}</script>
+</head>
+<body data-page="home">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <h1><small>DR.</small>Vaibhav Tyagi</h1>
+          <p class="hero__role">Radar meteorologist</p>
+          <p class="hero__lead">I study <strong>high-impact weather</strong> through atmospheric observations, remote sensing and data-driven methods, bringing together <strong>weather radar, satellites, numerical weather prediction and AI</strong> to bridge fundamental science and operational meteorology.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="research.html">Research areas <span class="arr">→</span></a>
+            <a class="btn btn--ghost" href="#vision">My vision</a>
+          </div>
+          <ul class="hero__contact">
+            <li><span>Office</span><address>Dept. of Atmospheric &amp; Oceanic Sciences, McGill University<br>Burnside Hall, 805 Sherbrooke St. West, Montréal, QC H3A 0B9, Canada</address></li>
+            <li><span>Email</span><span class="hero__emails"><a href="mailto:vaibhavtyagi7191@gmail.com">vaibhavtyagi7191@gmail.com</a> <small>(personal)</small><br><a href="mailto:vaibhav.tyagi@mcgill.ca">vaibhav.tyagi@mcgill.ca</a> <small>(office)</small></span></li>
+            <li><span>Scholar</span><a href="https://scholar.google.com/citations?user=BVE2X2sAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile ↗</a></li>
+          </ul>
+        </div>
+
+        <figure class="scope-panel">
+          <div class="scope-panel__bar"><span><b data-ro="prod">DBZ</b> · PPI · EL 0.5° · 150 km</span><span data-ro="az">AZ 000.0°</span></div>
+          <canvas data-scope role="img" aria-label="Animated, simulated weather radar display with a squall line"></canvas>
+          <div class="scope-panel__controls">
+            <div class="seg" role="group" aria-label="Radar product">
+              <button class="is-on" data-product="dbz" aria-pressed="true">Reflectivity</button>
+              <button data-product="vel" aria-pressed="false">Velocity</button>
+            </div>          </div>
+          <div class="legend" id="legend"></div>
+          <figcaption>Simulated storm. Switch to velocity to spot a rotating cell.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- About + vision statement -->
+    <section class="section section--panel" id="vision">
+      <div class="container about">
+        <figure class="portrait reveal">
+          <div class="portrait__frame">
+            <!-- Save your photo as assets/profile.jpg; initials show until then -->
+            <img src="assets/profile.jpg" alt="Portrait of Vaibhav Tyagi" onerror="this.remove()">
+            <span class="portrait__fallback">VT</span>
+            <span class="portrait__sweep" aria-hidden="true"></span>
+          </div>
+          <figcaption>
+            <b>Dr. Vaibhav Tyagi</b>
+            <span>Postdoctoral Researcher<br>Atmospheric &amp; Oceanic Sciences<br>McGill University, Canada</span>
+          </figcaption>
+        </figure>
+        <div class="reveal">
+          <p class="tag">Research vision</p>
+          <h2>Advancing the science of high-impact weather</h2>
+          <p class="lead-quote">My long-term objective is to advance the understanding and prediction of high-impact weather through atmospheric observations, remote sensing and data-driven approaches.</p>
+          <p class="prose-muted">By integrating <strong>weather radar, satellite observations, numerical weather prediction and artificial intelligence</strong>, my research aims to bridge the gap between fundamental science and operational meteorology.</p>
+          <p class="label" style="margin-top:28px">Studied &amp; worked at</p>
+          <a class="inst-strip" id="instStrip" href="experience.html" aria-label="Institutions: see Education & Experience"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research areas -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Research themes</h2>
+          </div>        </div>
+        <div class="products" id="productCards"></div>
+      </div>
+    </section>
+
+    <!-- Latest -->
+    <section class="section section--panel">
+      <div class="container split">
+        <div>
+          <div class="section__head">
+            <div>
+              <p class="tag">Latest observations</p>
+              <h2>Recent papers</h2>
+            </div>
+            <a class="link-arrow" href="publications.html">All publications <span class="arr">→</span></a>
+          </div>
+          <ol class="pubs" id="latestPubs"></ol>
+        </div>
+        <aside class="bulletin panel reveal" aria-label="News">
+          <div class="bulletin__head"><span>WX Bulletin</span><span data-utc>--:--:--</span></div>
+          <ol id="newsList"></ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="tag">Recognition</p>
+            <h2>Highlights</h2>
+          </div>
+          <a class="link-arrow" href="awards.html">All awards <span class="arr">→</span></a>
+        </div>
+        <div class="awards" id="highlightAwards"></div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta__inner reveal">
+          <canvas class="flow-bg" data-flow data-flow-sparse aria-hidden="true"></canvas>
+          <p class="tag" style="justify-content:center">Open to collaboration</p>
+          <h2>Let's work on the next storm together</h2>
+          <p>Interested in radar meteorology, remote sensing or AI for weather? I'm always happy to talk.</p>
+          <a class="btn btn--primary" href="contact.html">Get in touch <span class="arr">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="viz.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Dr. Vaibhav Tyagi</title>
+  <meta name="description" content="Research of Vaibhav Tyagi: radar signal processing and quality control, radar-based nowcasting and QPE, convection, and satellite remote sensing, in the context of Mission Mausam and spaceborne missions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><rect width='34' height='34' rx='9' fill='%23071520'/><circle cx='17' cy='17' r='11' fill='none' stroke='%232ee6d6' stroke-opacity='.5'/><path d='M17 17 L17 6 A11 11 0 0 1 26.5 11.5 Z' fill='%232ee6d6' fill-opacity='.6'/><circle cx='22.5' cy='12' r='2' fill='%23fdf802'/><circle cx='11.5' cy='21.5' r='1.7' fill='%23fd0000'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('vt-theme') || 'dark'; } catch (e) {}</script>
+</head>
+<body data-page="research">
+  <header id="site-header"></header>
+
+  <main>
+    <!-- Mission Mausam + spaceborne missions -->
+    <section class="page-hero">
+      <canvas class="flow-bg" data-flow data-flow-sparse aria-hidden="true"></canvas>
+      <div class="container"><h1>Research</h1></div>
+    </section>
+
+    <section class="section section--panel">
+      <div class="container mausam">
+        <div class="mausam__text reveal">
+          <h2 class="mausam__title">Mission Mausam is transforming India's observing network</h2>
+          <p>Under the Ministry of Earth Sciences' <strong>Mission Mausam</strong>, India is modernising and expanding its weather-observing infrastructure. A central component is a major expansion of the national <strong>Doppler Weather Radar network</strong> with modern <strong>dual-polarization radars</strong> across the country.</p>
+          <p>From space, <strong>satellite missions</strong> complement these ground-based observations: precipitation radars and radiometers on GPM, India's INSAT geostationary imagers, Oceansat-3 scatterometer winds, the EarthCARE cloud-profiling Doppler radar, and proposed missions such as WIVERN for global in-cloud winds. Together they give a seamless view of clouds, precipitation and winds from storm to global scale.</p>
+          <div class="tags mausam__missions"><span>GPM</span><span>INSAT</span><span>Oceansat-3</span><span>EarthCARE</span><span>WIVERN</span><span>Ground DWR network</span></div>
+          <p>These observations will produce a large volume of high-resolution atmospheric data, which brings opportunities for discovery and new challenges in:</p>
+          <ul class="challenges">
+            <li><span>01</span>Radar signal processing</li>
+            <li><span>02</span>Data quality control</li>
+            <li><span>03</span>Precipitation microphysics</li>
+            <li><span>04</span>Convective dynamics</li>
+            <li><span>05</span>Quantitative precipitation estimation &amp; real-time forecasting</li>
+          </ul>
+        </div>
+        <div class="mausam__figs">
+          <figure class="demo network reveal" data-network>
+            <div class="demo__bar"><span><b>DWR</b> · Network</span><button class="replay" data-replay>↻ Replay</button></div>
+            <div class="demo__stage network__stage"><canvas role="img" aria-label="Illustration of a weather radar network expanding with new dual-polarization radars"></canvas></div>
+            <figcaption class="demo__hint">Schematic illustration, not actual radar locations.</figcaption>
+          </figure>
+          <figure class="demo storm3d reveal" data-storm3d>
+            <div class="demo__bar">
+              <span><b>3D</b> · One storm, three sensors</span>
+              <div class="seg" role="group" aria-label="Sensor">
+                <button class="is-on" data-sensor="all" aria-pressed="true">All</button>
+                <button data-sensor="dwr" aria-pressed="false">Radar</button>
+                <button data-sensor="leo" aria-pressed="false">LEO</button>
+                <button data-sensor="geo" aria-pressed="false">GEO</button>
+              </div>
+            </div>
+            <div class="demo__stage storm3d__stage"><canvas role="img" aria-label="Animated 3D storm observed by a ground Doppler radar, a satellite radar passing overhead and a geostationary imager"></canvas></div>
+            <figcaption class="demo__hint storm3d__hud" data-hud aria-live="polite"></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach: four streams -->
+    <section class="section">
+      <div class="container">
+        <h2>Research approach</h2>
+        <p class="section__lead">Integrating complementary observations and models to connect fundamental atmospheric science with operational meteorology.</p>
+        <div class="fusion reveal">
+          <ul class="fusion__in">
+            <li style="--c:#2ee6d6"><b>Weather radar</b><small>Single- &amp; dual-pol Doppler networks</small></li>
+            <li style="--c:#019ff4"><b>Satellite observations</b><small>Scatterometers, precipitation missions</small></li>
+            <li style="--c:#fdf802"><b>Numerical weather prediction</b><small>Models &amp; data assimilation</small></li>
+            <li style="--c:#f800fd"><b>Artificial intelligence</b><small>Physics-informed ML</small></li>
+          </ul>
+          <div class="fusion__wire" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="fusion__mid">
+            <div class="fusion__core">
+              <div class="fusion__scope" aria-hidden="true"><span></span></div>
+              <b>Atmospheric<br>remote sensing</b>
+              <small>Science ⇄ Operations</small>
+            </div>
+          </div>
+          <div class="fusion__wire" aria-hidden="true"><i></i><i></i><i></i></div>
+          <ul class="fusion__out">
+            <li><b>Natural hazards</b><small>Monitoring &amp; nowcasting</small></li>
+            <li><b>Monsoon variability</b><small>Onset, extremes, prediction</small></li>
+            <li><b>Precipitation processes</b><small>Convection, microphysics &amp; QPE</small></li>
+          </ul>
+          <div class="fusion__wire fusion__wire--down fusion__wire--l" aria-hidden="true"><i></i></div>
+          <div class="fusion__wire fusion__wire--down" aria-hidden="true"><i></i></div>
+          <div class="fusion__wire fusion__wire--down fusion__wire--r" aria-hidden="true"><i></i></div>
+          <div class="fusion__r2o">
+            <span>R2O</span>
+            <b>Research to operations</b>
+            <small>Translating research into reliable operational products</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush">
+      <div class="container"><h2>Research themes</h2></div>
+      <div class="container" id="areaDetails"></div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer" class="footer"></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data.js"></script>
+  <script src="viz.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
