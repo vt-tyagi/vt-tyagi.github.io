@@ -136,7 +136,7 @@ const SITE = {
   publications: [
     { type: "journal", year: 2026, authors: "Tyagi, V., Das, S., Shukla, B. P.",
       title: "ML-based Wind Retrieval from Single Doppler Weather Radar Observations under Multicollinearity Conditions",
-      venue: "IEEE Transactions on Geoscience and Remote Sensing (accepted)" },
+      venue: "IEEE Transactions on Geoscience and Remote Sensing (accepted)", doi: "10.1109/TGRS.2026.3747659" },
     { type: "journal", year: 2026, authors: "Tyagi, V., Das, S.",
       title: "A Machine Learning based Framework for Bias Correction of Doppler Weather Radar Observations",
       venue: "IEEE Geoscience and Remote Sensing Letters", doi: "10.1109/LGRS.2026.3667319" },
