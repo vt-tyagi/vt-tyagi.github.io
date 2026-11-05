@@ -875,11 +875,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     }
 
     .hero .portrait {
-        max-width: 340px;
+        max-width: 320px;
     }
 
     #vision .scope-panel {
-        max-width: 480px;
+        max-width: 460px;
     }
 }
 
