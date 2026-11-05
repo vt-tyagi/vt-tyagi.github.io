@@ -214,7 +214,7 @@ const WX = (() => {
     paint(); addEventListener("resize", paint);
     // Drag (mouse, pen or touch) anywhere on the scope; the hidden range input keeps keyboard access
     const range = root.querySelector("input"), box = root.querySelector(".compare");
-    const set = () => root.style.setProperty("--split", range.value + "%");
+    const set = () => box.style.setProperty("--split", range.value + "%");
     const fromPointer = e => {
       const r = box.getBoundingClientRect();
       range.value = Math.round(Math.min(100, Math.max(0, (e.clientX - r.left) / r.width * 100)));
