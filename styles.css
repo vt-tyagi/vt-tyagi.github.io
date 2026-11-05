@@ -802,3 +802,93 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   .gauge__bar i { width: var(--w); }
   @view-transition { navigation: none; }
 }
+
+
+
+
+/* =========================================
+   HOMEPAGE IMAGE SIZE AND LAYOUT ADJUSTMENTS
+   ========================================= */
+
+/* Hero: text and profile photograph */
+.hero__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.hero .portrait {
+    width: 100%;
+    max-width: 380px;
+    justify-self: center;
+}
+
+.hero .portrait__frame {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+}
+
+/* Research vision: radar and text */
+#vision .about {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 52px;
+    align-items: center;
+}
+
+#vision .scope-panel {
+    width: 100%;
+    max-width: 460px;
+    justify-self: center;
+}
+
+#vision .scope-panel canvas {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Tablet and medium screens */
+@media (max-width: 1060px) {
+    .hero__grid {
+        gap: 32px;
+    }
+
+    .hero .portrait {
+        max-width: 340px;
+    }
+
+    #vision .about {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    #vision .scope-panel {
+        max-width: 420px;
+    }
+}
+
+/* Mobile and smaller screens */
+@media (max-width: 860px) {
+    .hero__grid,
+    #vision .about {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero .portrait {
+        max-width: 340px;
+    }
+
+    #vision .scope-panel {
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero .portrait {
+        max-width: 300px;
+    }
+
+    #vision .scope-panel {
+        max-width: 100%;
+    }
+}
